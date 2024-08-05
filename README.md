@@ -4,7 +4,7 @@
 This project builds a credit score prediction model and deploys it as a web application using Streamlit. The model predicts credit scores based on various financial features.
 
 ## Dataset
-The dataset used in this project was obtained from Kaggle. I used the [cleaned dataset](https://www.kaggle.com/datasets/clkmuhammed/creditscoreclassification/data?select=train.csv) since the dataset is too messy and the focus of this project is modeling credit score. The original dataset can be found [here](https://www.kaggle.com/datasets/parisrohan/credit-score-classification).
+The dataset used in this project was obtained from Kaggle. I used the [cleaned dataset](https://www.kaggle.com/datasets/clkmuhammed/creditscoreclassification/data?select=train.csv/@blank) since the dataset is too messy and the focus of this project is modeling credit score. The original dataset can be found [here](https://www.kaggle.com/datasets/parisrohan/credit-score-classification/@blank).
 
 ### Dataset Description
 The dataset includes credit-related information for various individuals. Below is a description of the columns in the dataset:
@@ -40,7 +40,7 @@ The dataset includes credit-related information for various individuals. Below i
 | Monthly_Balance               | Monthly balance amount of the customer (in USD)                          |
 | Credit_Score                  | The bracket of credit score (Poor, Standard, Good)                       |
 
-## `model_building.ipynb`
+## [`model_building.ipynb`](model_building.ipynb)
 
 ### Data Preparation
 1. **Data Import**: The dataset is loaded using `pandas` and contains 100,000 rows with various financial features.
@@ -71,5 +71,14 @@ The dataset includes credit-related information for various individuals. Below i
 ### Results
 Linear Regression performs the best with an MSE of 0.0000 and an R-squared value of 1.0000. It was saved using `pickle` for future use.
 
-## `credit_scoring.py`
-Script for web application for predicting credit scores based on user inputs. Using a pre-trained model (`credit_score_model.pkl`) to estimate credit scores from features like the number of bank accounts, credit cards, loans, and other financial metrics. Users input their financial details through a web interface, and the script displays the predicted credit score. This tool is designed to be run in the Jupyter Lab terminal using the command `streamlit run credit_scoring.py`.
+## [`credit_scoring.py`](credit_scoring.py)
+Script for a web application for predicting credit scores based on user inputs. It uses a pre-trained model ([`credit_score_model.pkl`](credit_score_model.pkl)) to estimate credit scores from features like the number of bank accounts, credit cards, loans, and other financial metrics. Users input their financial details through a web interface, and the script displays the predicted credit score. This tool is designed to be run in the Jupyter Lab terminal using this command:
+
+```bash
+streamlit run credit_scoring.py
+```
+The web app can be found in [here](https://mycreditscoringmodel.streamlit.app/@blank)
+
+## Notes
+
+This model isn't perfect due to the lack of data on new credit histories. It also has limitations because the `credit_utilization_ratio` feature in the training dataset ranges only from 20% to 50%. Thus, predictions may not be accurate if the credit utilization ratio is below 10% or above 50%.
