@@ -2,7 +2,7 @@ pandas
 matplotlib
 seaborn
 warnings
-sklearn
+scikit-learn
 xgboost
 numpy
 pickle
