@@ -4,7 +4,7 @@
 This project builds a credit score prediction model and deploys it as a web application using Streamlit. The model predicts credit scores based on various financial features.
 
 ## Dataset
-The dataset used in this project was obtained from Kaggle. I used the [cleaned dataset](https://www.kaggle.com/datasets/clkmuhammed/creditscoreclassification/data?select=train.csv/@blank) since the dataset is too messy and the focus of this project is modeling credit score. The original dataset can be found [here](https://www.kaggle.com/datasets/parisrohan/credit-score-classification/@blank).
+The dataset used in this project was obtained from Kaggle. I used the [cleaned dataset](https://www.kaggle.com/datasets/clkmuhammed/creditscoreclassification/data?select=train.csv) since the dataset is too messy and the focus of this project is modeling credit score. The original dataset can be found [here](https://www.kaggle.com/datasets/parisrohan/credit-score-classification).
 
 ### Dataset Description
 The dataset includes credit-related information for various individuals. Below is a description of the columns in the dataset:
@@ -77,7 +77,7 @@ Script for a web application for predicting credit scores based on user inputs. 
 ```bash
 streamlit run credit_scoring.py
 ```
-The web app can be found in [here](https://mycreditscoringmodel.streamlit.app/@blank)
+The web app can be found in [here](https://mycreditscoringmodel.streamlit.app)
 
 ## Notes
 
